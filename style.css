@@ -1,0 +1,13 @@
+body {
+    margin: 1em auto;
+    width: 1000px;
+    font-family: sans-serif;
+}
+
+canvas#board {
+    border: 1px solid grey;
+}
+
+h2 {
+    font-family: monospace;
+}
