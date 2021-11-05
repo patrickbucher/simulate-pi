@@ -56,15 +56,16 @@ const main = () => {
             inside++;
         }
         i++;
-        if (i == totalCycles - 1) {
-            clearInterval(interval);
-        } else if (i % updateEveryNthCycle == 0) {
+        if (i % updateEveryNthCycle == 0) {
             const ratio = inside / i;
             resultSpan.textContent = ratio * 4;
             pointsSpan.textContent = i;
             insideSpan.textContent = inside;
             outsideSpan.textContent = outside;
             ratioSpan.textContent = ratio;
+        }
+        if (i == totalCycles) {
+            clearInterval(interval);
         }
     }, intervalTimingMillis);
 };
